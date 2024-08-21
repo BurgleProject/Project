@@ -11,9 +11,10 @@ This includes making space for:
 
 * Focusing on one or two aspects of your responsibilities, ex. house chores, work, etc. (the *meat* of the sandwich) 
 
+* One "cheese" or way to wind down/reward yourself in the day (*preferrably before the bottom bun*).
+
 * A bedtime routine (*the bottom bun*)
 
-* One "cheese" or way to wind down/reward yourself in the day (*preferrably before the bottom bun*).
 ---
 **Burgle!** takes this one step further and visualizes this into an app that allows users to build their own routines and plan out their tasks with their own custom burger. 
 

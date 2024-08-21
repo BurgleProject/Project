@@ -94,4 +94,4 @@ Below, you can find wireframes for our project. Each wireframe shows a different
 
 ![Burgle Wireframe Concept Sketch](./conceptcontent/Burgleconcept.jpg)
 
-![Burgle Wireframe](./conceptcontent/Screenshot%202024-08-21%20at%2015.14.07.png)
+[Wireframe for page 2]

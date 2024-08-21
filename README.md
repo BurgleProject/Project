@@ -11,7 +11,7 @@ This includes making space for:
 
 * Focusing on one or two aspects of your responsibilities, ex. house chores, work, etc. (the *meat* of the sandwich) 
 
-* One "cheese" or way to wind down/reward yourself in the day (*preferrably before the bottom bun*).
+* One "cheese" or way to wind down/reward yourself in the day (*preferably before the bottom bun*).
 
 * A bedtime routine (*the bottom bun*)
 

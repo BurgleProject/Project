@@ -93,5 +93,6 @@ Wireframes of each page in your application
 Below, you can find wireframes for our project. Each wireframe shows a different page of our application as well as the key components of the application. Details such as specific text values or images are intentionally not included:
 
 ![Burgle Wireframe Concept Sketch](./conceptcontent/Burgleconcept.jpg)
+Burgle Wireframe concept sketch 1 by Alex Wedding
 
 [Wireframe for page 2]

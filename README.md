@@ -92,6 +92,6 @@ Day 5
 Wireframes of each page in your application
 Below, you can find wireframes for our project. Each wireframe shows a different page of our application as well as the key components of the application. Details such as specific text values or images are intentionally not included:
 
-[Wireframe for page 1]
+[Burgle Wireframe Concept Sketch](./conceptcontent/Burgleconcept.jpg)
 
 [Wireframe for page 2]

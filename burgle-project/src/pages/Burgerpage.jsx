@@ -26,15 +26,6 @@ function BurgerPage(){
 // import QuoteOTD from '../components/Quotes/quote'
 
 
-function BurgerPage() {
-    console.log("hellur")
-    return (
 
-        // <QuoteOTD />,
-        <BurgerButtons />
-
-    )
-
-}
 
 export default BurgerPage

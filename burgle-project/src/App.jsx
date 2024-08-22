@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import {BurgerPage} from './pages/Burgerpage'
+// import {BurgerPage} from './pages/Burgerpage'
 
 function App() {
   console.log("HIIIIII")

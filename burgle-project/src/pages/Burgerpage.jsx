@@ -1,11 +1,12 @@
 import BurgerButtons from '../components/BurgerButtons'
-import QuoteOTD from '../components/Quotes/quote'
+// import QuoteOTD from '../components/Quotes/quote'
+
 
 function BurgerPage() {
     console.log("hellur")
     return (
 
-        <QuoteOTD />,
+        // <QuoteOTD />,
         <BurgerButtons />
 
     )

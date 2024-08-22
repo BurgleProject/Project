@@ -1,17 +1,40 @@
 import '../index.css'
+import { useState } from 'react'
 
 
-function BurgerButtons(){
-  const handleClick = () => {
-    console.log('hi')
-  }
+function BurgerButtons({ setMessage, setVisibility }){
  return (
- <div>
-   <button id = 'burger' onClick={handleClick}>Wake Up Routine!</button>
-   <button id = 'burger'onClick={handleClick}>Big Focus!</button>
-   <button id = 'burger'onClick={handleClick}>Relax!</button>
-   <button id = 'burger'onClick={handleClick}>Reflect!</button>
-   <button id = 'burger'onClick={handleClick}>Sleep!</button>
+ <div id = 'burger-box'>
+   <button className = 'burger' onClick={()=> {
+    setVisibility('visible')
+    setMessage('Wake Up Routine!')
+   }}>
+    Wake Up Routine!
+   </button>
+
+   <button className = 'burger'onClick={()=> {
+    setVisibility('visible')
+    setMessage('Big Focus!')
+   }}>
+    Big Focus!
+    </button>
+    <button className = 'burger'onClick={()=> {
+    setVisibility('visible')
+    setMessage('Relax!')
+   }}>
+    Relax!
+    </button>
+    <button className = 'burger'onClick={()=> {
+    setVisibility('visible')
+    setMessage('Reflect!')
+   }}>
+    Reflect!
+    </button>
+    <button className = 'burger' id = 'last-item' onClick={()=> {
+    setMessage('Sleep!')
+   }}>
+    Sleep!
+    </button>
  </div>
 )
 }

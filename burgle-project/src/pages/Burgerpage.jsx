@@ -1,9 +1,9 @@
-// import {BurgerButtons} from '../components/Burger.jsx'
+import BurgerButtons from '../components/BurgerButtons'
 
 function BurgerPage(){
  return(
   <>
-   {/* <BurgerButtons/> */}
+   <BurgerButtons/>
   </>
  )
 }

@@ -22,7 +22,7 @@ function BurgerPage(){
    </div>
   </>
  )
-
+}
 // import QuoteOTD from '../components/Quotes/quote'
 
 

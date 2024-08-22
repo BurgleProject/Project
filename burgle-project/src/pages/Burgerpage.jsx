@@ -1,9 +1,24 @@
 import BurgerButtons from '../components/BurgerButtons'
+import Notecard from '../components/Notecard'
+import Additems from '../components/Additems'
+import { useState } from 'react'
+import Navbar from '../components/Navbar'
+import Spoons from '../components/Spoons'
 
 function BurgerPage(){
+ const [message, setMessage] = useState('')
+ const [visible, setVisibility] = useState('hidden')
  return(
   <>
-   <BurgerButtons/>
+   <Navbar/>
+   <div id = 'component-container'>
+    <div className = 'sidebar'>
+     <Additems/>
+    <Spoons/>
+    </div>
+   <BurgerButtons setMessage={ setMessage } setVisibility = {setVisibility}/>
+   <Notecard message={message} visible = {visible} />
+   </div>
   </>
  )
 }

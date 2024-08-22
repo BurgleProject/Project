@@ -1,4 +1,5 @@
 import BurgerButtons from '../components/BurgerButtons'
+
 import Notecard from '../components/Notecard'
 import Additems from '../components/Additems'
 import { useState } from 'react'
@@ -21,6 +22,19 @@ function BurgerPage(){
    </div>
   </>
  )
+
+// import QuoteOTD from '../components/Quotes/quote'
+
+
+function BurgerPage() {
+    console.log("hellur")
+    return (
+
+        // <QuoteOTD />,
+        <BurgerButtons />
+
+    )
+
 }
 
 export default BurgerPage

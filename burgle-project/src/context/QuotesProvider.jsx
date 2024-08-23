@@ -11,7 +11,7 @@ const QuoteProvider = ({ children }) => {
 
     useEffect(() => {
         const fetch = async () => {
-            const [data, error] = await handleFetch(`https://api.waifu.pics/sfw/cry`)
+            const [data, error] = await handleFetch(`https://api.quotable.io/random`)
 
             if (data) setAllQuotes(data)
             console.log(data)
@@ -29,7 +29,7 @@ const QuoteProvider = ({ children }) => {
         setAllQuotes
     }
 
-    console.log("hello")
+    console.log("it's me the api file")
     return (
         <QuoteContext.Provider value={contextValues}>
             {children}

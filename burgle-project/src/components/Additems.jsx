@@ -1,35 +1,33 @@
 import '../index.css'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import BurgerButtons from './BurgerButtons'
+import ButtonContext from '../context/ButtonContext'
 
 function Additems({setMessage,setVisibility}){
- 
+ const {buttons, setButtons} = useContext(ButtonContext)
+ const lastButton = buttons[buttons.length-1]
 
- const handleclick = (id) => {
-   return (
-    <div>
-     <button className = 'burger' onClick={()=> {
-     setVisibility('visible')
-     setMessage(`${id}`)
-   }}>
-    `${id}`
-   </button>
-    </div>
-   )
+  const addNewButton = ({key}) => {
+    const newButtonLabel = `${key}`
+    const newButton = { label: newButtonLabel, id: newButtonLabel }
+    buttons.pop()
+    setButtons([...buttons, newButton, lastButton]);
   }
+  
  return(
   <div className = 'sidebar' id = 'item-box'>
    <h1>Add Items!</h1>
    <ul>
     <li id = 'pickles'>
-     <button onClick={handleclick('pickles')}>Pickles</button>
+     <button onClick={() => addNewButton({ key: "Pickles!"})}>Pickles</button>
      <p>Add Pickles (Social)</p>
     </li>
     <li id = 'lettuce'>
-     <button onClick={handleclick('lettuce')}>Lettuce</button>
+     <button onClick={() => addNewButton({ key: "Lettuce!"})}>Lettuce</button>
      <p>Add Lettuce (Hygiene)</p>
     </li>
     <li id = 'Tomato'>
-     <button onClick={handleclick('tomato')}>Tomato</button>
+     <button onClick={() => addNewButton({ key: "Tomato!"})}>Tomato</button>
      <p>Add Tomato (Treat)</p>
     </li>
    </ul>

@@ -63,6 +63,12 @@
   background-color: lavender;
 }
 
+#newburger{
+  width: 200px;
+  height: 100px;
+  margin: 250px 0px 10px 1px;
+}
+
 #spoon-box{
   display: flex;
   background-color: white;

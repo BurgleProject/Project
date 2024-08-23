@@ -5,6 +5,7 @@ import Additems from '../components/Additems'
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Spoons from '../components/Spoons'
+import Newburger from '../components/Newburger'
 
 function BurgerPage(){
  const [message, setMessage] = useState('')
@@ -19,6 +20,7 @@ function BurgerPage(){
     </div>
    <BurgerButtons setMessage={ setMessage } setVisibility = {setVisibility}/>
    <Notecard message={message} visible = {visible} />
+   <Newburger/>
    </div>
   </>
  )

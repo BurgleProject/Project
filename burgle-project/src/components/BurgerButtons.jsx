@@ -2,8 +2,9 @@ import '../index.css'
 import { useState, useContext } from 'react'
 import ButtonContext from '../context/ButtonContext';
 
+
 function BurgerButtons({ setMessage, setVisibility }) {
-  const {buttons, setButtons} = useContext(ButtonContext)
+  const { buttons, setButtons } = useContext(ButtonContext)
 
   return (
     <div id='burger-box'>

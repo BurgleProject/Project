@@ -7,7 +7,7 @@ const ButtonProvider = ({children}) => {
   { label: 'Big Focus!', id: 'Big Focus!' },
   { label: 'Relax!', id: 'Relax!' },
   { label: 'Reflect!', id: 'Reflect!' },
-  { label: 'Sleep!', id: 'Sleep!' },
+  { label: 'Night Night Routine!', id: 'Night Night Routine!' },
  ])
 
  let contextValues = {

@@ -1,5 +1,30 @@
-.burger{
-  display:flex;
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#burger-component-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-space {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.burgersection {
+  display: flex;
+  flex-direction: row;
+}
+
+.burger {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -8,13 +33,14 @@
   margin: 1px 0px 10px 1px;
 }
 
-#burger-box{
+#burger-box {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
 }
-.notecard{
+
+.notecard {
   background-color: white;
   border: 2px solid black;
   width: 300px;
@@ -24,7 +50,7 @@
   margin: 100px;
 }
 
-#nav{
+#nav {
   background-color: lavender;
   width: 100vw;
   height: 75px;
@@ -33,26 +59,26 @@
   display: flex;
 }
 
-#name{
+#name {
   font-family: 'Franklin Gothic Medium';
   font-weight: bolder;
   font-style: italic;
 }
 
-#help{ 
+#help {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
 }
 
-.sidebar{
+.sidebar {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin: 0;
 }
 
-#item-box{
+#item-box {
   display: flex;
   background-color: white;
   border: 2px solid black;
@@ -80,7 +106,7 @@
   background-color: lavender;
 }
 
-#component-container{
+#component-container {
   display: flex;
   align-items: flex-start;
 }

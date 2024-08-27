@@ -4,15 +4,14 @@ import App from './App.jsx'
 import './index.css'
 import QuoteProvider from './context/QuotesProvider.jsx'
 import ButtonProvider from './context/ButtonProvider.jsx'
+import SpoonProvider from './context/SpoonProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
-
-  <ButtonProvider>
+<SpoonProvider>
+   <ButtonProvider>
     <QuoteProvider>
         <App />
     </QuoteProvider>
   </ButtonProvider>
-    
-
-
+</SpoonProvider>
 )

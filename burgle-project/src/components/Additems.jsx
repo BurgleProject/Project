@@ -28,7 +28,7 @@ function Additems({setMessage,setVisibility}){
     </li>
     <li id = 'Tomato'>
      <button onClick={() => addNewButton({ key: "Tomato!"})}>Tomato</button>
-     <p>Add Tomato (Treat)</p>
+     <p>Add Tomato (Do Now!)</p>
     </li>
    </ul>
   </div>

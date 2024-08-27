@@ -6,6 +6,7 @@ import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Spoons from '../components/Spoons'
 import QuoteDisplay from '../components/QuoteDisplay'
+import Newburger from '../components/Newburger'
 
 function BurgerPage() {
     const [message, setMessage] = useState('')
@@ -13,7 +14,6 @@ function BurgerPage() {
     return (
         <>
             {/* navigation at the top */}
-
             <section className='navigation'>
                 <Navbar />
             </section>
@@ -30,6 +30,7 @@ function BurgerPage() {
                 <div className='sidebar'>
                     <Additems />
                     <Spoons />
+                    <Newburger/>
                 </div>
                 <section className='burgersection'>
                     <BurgerButtons setMessage={setMessage} setVisibility={setVisibility} />

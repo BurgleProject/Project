@@ -6,11 +6,7 @@ function App() {
   console.log("HIIIIII")
 
   return (
-    <div>
-
       <BurgerPage />
-
-
     </div>
   )
 }

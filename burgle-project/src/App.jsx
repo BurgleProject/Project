@@ -1,7 +1,4 @@
-import './App.css'
 import BurgerPage from './pages/BurgerPage'
-
-
 
 function App() {
 
@@ -12,6 +9,7 @@ function App() {
     <div>
 
       <BurgerPage />
+
 
     </div>
   )

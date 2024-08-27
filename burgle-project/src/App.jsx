@@ -7,7 +7,7 @@ function App() {
 
   return (
       <BurgerPage />
-    </div>
+   
   )
 }
 

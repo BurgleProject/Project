@@ -1,37 +1,80 @@
-import { useState } from "react";
-
+import React, { useContext, useState } from "react";
+import ListContext from "./ListContext";
 
 export default function Todo() {
-    // const { todoList, setTodoList } = useContext(ListContext)
+    const { todoLists, setTodoLists } = useContext(ListContext);
+    const [newListName, setNewListName] = useState("");
+    const [newItem, setNewItem] = useState("");
+    const [selectedListIndex, setSelectedListIndex] = useState(null);
 
-    // //creating a use state variable in order to store the to-do item 
-    const [todo, setTodo] = useState("");
-    const [todoList, setTodoList] = useState([]);
+    // Function to add a new to-do list
+    const handleAddList = () => {
+        if (newListName.trim() === "") return;
+        setTodoLists([...todoLists, { name: newListName, items: [] }]);
+        setNewListName("");
+    };
 
-    //handling the submit 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        //now setting the to do list. spreading the todo list of previous items to make sure they're kept in the array, along with the
-        //new todo item submitted. 
-        setTodoList([...todoList, todo])
-
-        //can't do this because setting a value is an async action
-        // console.log(todoList)
-
-        //emptying the task bar after adding a task
-        setTodo("");
+    // Function to add an item to the selected to-do list
+    const handleAddItem = () => {
+        if (newItem.trim() === "" || selectedListIndex === null) return;
+        const updatedLists = [...todoLists];
+        updatedLists[selectedListIndex].items.push(newItem);
+        setTodoLists(updatedLists);
+        setNewItem("");
     };
 
     return (
-
-        //
         <div className="todo-form-section">
-            <form className="todo-task-submission" onSubmit={handleSubmit}>
-                {/* taking the event (typing input) and setting the todo value to the event input  */}
-                <input className="todo-input" onChange={(e) => setTodo(e.target.value)} value={todo} type="text"></input>
-                <button type="submit">Add Task</button>
-            </form>
-            {console.log(todoList)}
-        </div >
+            <div>
+                <input
+                    type="text"
+                    placeholder="New List Name"
+                    value={newListName}
+                    onChange={(e) => setNewListName(e.target.value)}
+                />
+                <button onClick={handleAddList}>Add List</button>
+            </div>
+
+            {todoLists.length > 0 && (
+                <>
+                    <div>
+                        <select
+                            onChange={(e) => setSelectedListIndex(e.target.value)}
+                            value={selectedListIndex}
+                        >
+                            <option value={null}>Select List</option>
+                            {todoLists.map((list, index) => (
+                                <option key={index} value={index}>
+                                    {list.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+
+                    <div>
+                        <input
+                            type="text"
+                            placeholder="New Item"
+                            value={newItem}
+                            onChange={(e) => setNewItem(e.target.value)}
+                        />
+                        <button onClick={handleAddItem}>Add Item</button>
+                    </div>
+                </>
+            )}
+
+            <div>
+                {todoLists.map((list, index) => (
+                    <div key={index}>
+                        <h3>{list.name}</h3>
+                        <ul>
+                            {list.items.map((item, itemIndex) => (
+                                <li key={itemIndex}>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+            </div>
+        </div>
     );
 }

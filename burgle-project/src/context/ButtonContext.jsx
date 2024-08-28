@@ -1,5 +1,8 @@
 import { createContext } from "react";
 
-const ButtonContext = createContext();
+const ButtonContext = createContext({
+  buttons: [],
+  setButtons: () => {}
+});
 
 export default ButtonContext

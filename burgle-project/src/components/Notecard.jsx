@@ -1,19 +1,25 @@
-// import { useState } from "react" 
-import '../index.css'
+import { useState, useContext } from "react";
+import '../index.css';
+import ListContext from "../context/ListContext";
 
 function Notecard({ message, visible }) {
+ const { todoLists } = useContext(ListContext);
 
-  //import graphic for notecard into here so the list pops up on it!
-  //see how to make graphic extend as tasks add on
-  return (
-    <div className="notecard" style={{ visibility: `${visible}` }}>
-      <h1>{message}</h1>
-      {/*<ul>
-     <li>to-do item will come from input of json server</li>
-    </ul> */}
-
-    </div>
-  )
+ return (
+     <div className="notecard" style={{ visibility: visible }}>
+         <h1>{message}</h1>
+         {todoLists.map((list, listIndex) => (
+             <div key={listIndex} className="todo-list">
+                 <h2>Todo List {listIndex + 1}</h2>
+                 <ul>
+                     {list.map((item, itemIndex) => (
+                         <li key={itemIndex}>{item}</li>
+                     ))}
+                 </ul>
+             </div>
+         ))}
+     </div>
+ );
 }
 
-export default Notecard
+export default Notecard;

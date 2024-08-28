@@ -6,9 +6,7 @@ function App() {
   console.log("HIIIIII")
 
   return (
-
     <BurgerPage />
-
   )
 }
 

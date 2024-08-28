@@ -110,3 +110,19 @@ body {
   display: flex;
   align-items: flex-start;
 }
+
+#spoon-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px
+}
+
+#spoon{
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: grey;
+  border: 2px solid black;
+  margin: 10px;
+  align-items: center;
+}

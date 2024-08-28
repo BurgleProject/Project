@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
-import ListContext from "./ListContext";
+import ListContext from "../context/ListContext";
 
 export default function Todo() {
     const { todoLists, setTodoLists } = useContext(ListContext);
     const [newListName, setNewListName] = useState("");
     const [newItem, setNewItem] = useState("");
-    const [selectedListIndex, setSelectedListIndex] = useState(null);
+    const [selectedListIndex, setSelectedListIndex] = useState(undefined);
 
     // Function to add a new to-do list
     const handleAddList = () => {
@@ -14,14 +14,20 @@ export default function Todo() {
         setNewListName("");
     };
 
+
+
     // Function to add an item to the selected to-do list
     const handleAddItem = () => {
-        if (newItem.trim() === "" || selectedListIndex === null) return;
+        if (newItem.trim() === "" || selectedListIndex === undefined) return;
         const updatedLists = [...todoLists];
         updatedLists[selectedListIndex].items.push(newItem);
         setTodoLists(updatedLists);
         setNewItem("");
     };
+
+    const handleDelete = () => {
+        ;
+    }
 
     return (
         <div className="todo-form-section">
@@ -42,7 +48,7 @@ export default function Todo() {
                             onChange={(e) => setSelectedListIndex(e.target.value)}
                             value={selectedListIndex}
                         >
-                            <option value={null}>Select List</option>
+                            <option value={''}>Select List</option>
                             {todoLists.map((list, index) => (
                                 <option key={index} value={index}>
                                     {list.name}
@@ -51,30 +57,38 @@ export default function Todo() {
                         </select>
                     </div>
 
-                    <div>
+                    <div className="itemsection">
                         <input
                             type="text"
                             placeholder="New Item"
                             value={newItem}
                             onChange={(e) => setNewItem(e.target.value)}
                         />
-                        <button onClick={handleAddItem}>Add Item</button>
+                        <button className="additembutton" onClick={handleAddItem}>Add Item</button>
                     </div>
                 </>
             )}
 
-            <div>
+            <div className="todolist">
                 {todoLists.map((list, index) => (
                     <div key={index}>
                         <h3>{list.name}</h3>
                         <ul>
                             {list.items.map((item, itemIndex) => (
-                                <li key={itemIndex}>{item}</li>
+                                <li key={itemIndex}>
+                                    {item}
+                                    <span>
+                                        <button type="button" key={itemIndex} onClick={handleDelete}>x</button>
+                                    </span>
+                                </li>
                             ))}
                         </ul>
                     </div>
                 ))}
             </div>
+
+
         </div>
     );
 }
+

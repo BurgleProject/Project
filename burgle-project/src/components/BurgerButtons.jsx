@@ -6,6 +6,7 @@ import ButtonContext from '../context/ButtonContext';
 function BurgerButtons({ setMessage, setVisibility }) {
   const { buttons, setButtons } = useContext(ButtonContext)
 
+
   return (
     <div id='burger-box'>
       {buttons.map((button, index) => (
@@ -15,6 +16,7 @@ function BurgerButtons({ setMessage, setVisibility }) {
           onClick={() => {
             setVisibility('visible');
             setMessage(button.id);
+
           }}
         >
           {button.label}

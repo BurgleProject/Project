@@ -16,7 +16,7 @@ function BurgerButtons({ setMessage, setVisibility }) {
           onClick={() => {
             setVisibility('visible');
             setMessage(button.id);
-
+            
           }}
         >
           {button.label}

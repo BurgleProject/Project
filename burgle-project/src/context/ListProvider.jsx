@@ -3,7 +3,7 @@ import ButtonContext from "./ButtonContext";
 import { useState } from "react";
 
 const ListProvider = () => {
-    const [todoList, setTodoList] = use
-
+    const [todoList, setTodoList] = useState([])
+    
 
 }

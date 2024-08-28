@@ -30,11 +30,11 @@ function BurgerPage() {
                 <div className='sidebar'>
                     <Additems />
                     <Spoons />
-                    <Newburger/>
                 </div>
                 <section className='burgersection'>
                     <BurgerButtons setMessage={setMessage} setVisibility={setVisibility} />
                     <Notecard message={message} visible={visible} />
+                    <Newburger />
                 </section>
 
             </div>

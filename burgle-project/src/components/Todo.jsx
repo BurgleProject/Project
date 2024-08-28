@@ -1,9 +1,10 @@
 import { useState } from "react";
-import BurgerButtons from "./BurgerButtons";
+
 
 export default function Todo() {
+    // const { todoList, setTodoList } = useContext(ListContext)
 
-    //creating a use state variable in order to store the to-do item 
+    // //creating a use state variable in order to store the to-do item 
     const [todo, setTodo] = useState("");
     const [todoList, setTodoList] = useState([]);
 

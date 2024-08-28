@@ -1,9 +1,20 @@
 import ListContext from "./ListContext";
-import ButtonContext from "./ButtonContext";
 import { useState } from "react";
 
-const ListProvider = () => {
-    const [todoList, setTodoList] = useState([])
-    
+const ListProvider = ({children}) => {
+    const [todoLists, setTodoLists] = useState([])
 
+let contextValues = {
+    todoLists,
+    setTodoLists
+   }
+  
+   return (
+   <ListContext.Provider value={{ todoLists, setTodoLists }}>
+    {children}
+   </ListContext.Provider>
+   )
 }
+
+export default ListProvider
+

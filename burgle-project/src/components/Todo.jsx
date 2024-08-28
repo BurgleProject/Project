@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import ListContext from "./ListContext";
+import ListContext from "../context/ListContext";
 
 export default function Todo() {
     const { todoLists, setTodoLists } = useContext(ListContext);
